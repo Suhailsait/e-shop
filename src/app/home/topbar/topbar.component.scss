@@ -1,0 +1,38 @@
+.topbar{
+    background: #464646;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        color: #ffffff7b;
+        padding: 0.5rem 0;
+        width: 80%;
+        margin: 0 auto;
+        .topbar-info{
+            display: flex;
+            gap: 2rem;
+            .working,.call,.mail{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                .icon,.h6{
+                    font-size: 1.2rem;
+                    font-weight: 200;
+                }
+            }
+    
+        }
+        .topbar-info-right{
+            display: flex;
+            gap: 2rem;
+            .store,.shipping{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                .icon,.h6{
+                    font-size: 1.2rem;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}

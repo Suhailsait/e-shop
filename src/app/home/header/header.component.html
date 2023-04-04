@@ -1,0 +1,54 @@
+<header class="header">
+  <aside class="header-top">
+    <span class="container">
+      <span class="logo">
+        <a href="">
+          <img src="../../../assets/images/logo/eshop.png" alt="" />
+        </a>
+      </span>
+      <span class="navbar">
+        <ul class="navbar-nav">
+          <li><a href="">Home</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">Elements</a></li>
+          <li><a href="">Pages</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="">Blogs</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </span>
+      <span class="header-setting">
+        <span class="material-icons-outlined user-info"> account_circle </span>
+        <span class="material-icons-outlined settings"> settings </span>
+        <span class="material-icons-outlined user-cart"> shopping_cart </span>
+      </span>
+    </span>
+  </aside>
+  <aside class="header-bottom">
+    <span class="container">
+      <span class="vertical-menu" [matMenuTriggerFor]="menu">
+        <span class="material-icons-outlined"> filter_list </span>
+        <span class="h3">Shop by Category</span>
+      </span>
+      <mat-menu #menu="matMenu">hello</mat-menu> 
+      <span class="search-form">
+        <form action="">
+
+        </form>
+      </span>
+      <span class="feat-icons">
+        <a href="">
+          <span class="material-icons-outlined"> favorite_border </span>
+        </a>
+        <a href="">
+          <span class="material-icons-outlined"> compare_arrows </span>
+        </a>
+      </span>
+      <a class="order-tracking" href="">
+        <span class="material-icons"> local_shipping </span>
+        <span class="track">Track Your Order</span>
+      </a>
+    </span>
+  </aside>
+</header>
+

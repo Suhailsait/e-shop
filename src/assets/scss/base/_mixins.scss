@@ -1,0 +1,121 @@
+@mixin d-flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin d-flex-h-center($justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+}
+@mixin d-flex-v-center($align-items) {
+  display: flex;
+  align-items: $align-items;
+  flex-wrap: wrap;
+}
+@mixin flex-v-center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-h-center {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@mixin flex-fd-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-fw-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flex-fw-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+@mixin flex-hv-center {
+  @include flex-v-center;
+  justify-content: center;
+}
+@mixin flex-d-wrap {
+  display: flex;
+}
+@mixin transition($effect) {
+  transition: $effect;
+  -webkit-transition: $effect;
+  -moz-transition: $effect;
+  -ms-transition: $effect;
+  -o-transition: $effect;
+}
+
+@mixin border-radius($pixel...) {
+  border-radius: $pixel;
+}
+
+@mixin list-no-style {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin popover-default {
+  padding: 0;
+  border: none;
+
+  .popover-body {
+    padding: 0;
+  }
+
+  .popover-arrow {
+    display: none;
+  }
+}
+
+@mixin flex-h-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flex-h-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin set-dafault-font($family, $size) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $font-weight-regular;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+// font style
+@mixin font-style-normal {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $dark-blue;
+}
+
+@mixin validation-error {
+  color: $warning-color-gd;
+  font-size: $font-size-11;
+  padding-left: 11px;
+  display: flex;
+}
+
+@mixin box-shadow($effect) {
+  box-shadow: $effect;
+  -webkit-box-shadow: $effect;
+  -moz-box-shadow: $effect;
+  -ms-box-shadow: $effect;
+  -o-box-shadow: $effect;
+}
+@mixin text-ellipsis {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

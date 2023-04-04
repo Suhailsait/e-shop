@@ -1,0 +1,33 @@
+// Media Query Breakpoints
+$mobile-sm: 480px;
+$mobile-md: 767px;
+$tablet-sm: 768px;
+$tablet-md: 992px;
+$desktop-sm: 1024px;
+$desktop-md: 1200px;
+$desktop-lg: 1440px;
+$border-10:10px;
+$border-8:8px;
+$border-3:3px;
+$border-100:100px;
+
+$mobile-smMax: 'screen and (max-width: 760px)';
+$mobile-xsMax: 'screen and (max-width: 530px)';
+$mobile-sm: 'screen and (min-width: 760px)';
+$desktop-max: 'screen and (max-width: 768px)';
+$desktop-md: 'screen and (min-width: 768px)';
+$desktop-lgMax: 'screen and (max-width: 993px)';
+$desktop-lg: 'screen and (min-width: 993px)';
+$desktop-pro: 'screen and (min-width: 1026px)';
+$desktop-lg-max:'screen and (max-width: 1250px)';
+$desktop-pro-max:'screen and (max-width: 1150px)';
+$desktop-pro-min:'screen and (min-width: 1150px)';
+$desktop-xl: 'screen and (min-width: 1400px)';
+$desktop-xlmax: 'screen and (max-width: 1400px)';
+$desktop-xsmin: 'screen and (min-width: 1350px)';
+$desktop-xxlMax: 'screen and (max-width: 1450px)';
+$desktop-xxl: 'screen and (min-width: 1600px)';
+$desktop-range:'screen and (min-width: 767px) and (max-width:993px)';
+$desktop-range2:'screen and (min-width: 1150px) and (max-width:1350px)';
+$desktop-range3:'screen and (min-width: 993px) and (max-width:1150px)';
+$tab-range2:'screen and (min-width: 760px) and (max-width:1150px)';

@@ -1,0 +1,799 @@
+@import "../base/colors.scss";
+@import "../base/variables.scss";
+@import "../base/mixins.scss";
+@import "../base/typography";
+@import "../base/fonts";
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-wrapper {
+  background: $body-bg;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  @include flex-d-wrap();
+}
+.global-width {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  @media only #{$mobile-smMax} {
+    padding: 0 2rem;
+  }
+}
+.main-content-area {
+  width: calc(100% - 10rem);
+  @media only #{$mobile-xsMax} {
+    width: calc(100% - 7rem);
+  }
+}
+.main-layout {
+  padding: 1.5rem 2rem;
+  display: flex;
+  height: calc(100vh - 7.8rem);
+  @media only #{$mobile-smMax} {
+    padding: 1.5rem 0;
+    height: calc(100vh - 10rem);
+  }
+  .layout-inner {
+    width: 100%;
+    background: $white;
+    box-shadow: $shadow1;
+    border-radius: 6px;
+  }
+  .inner-header {
+    padding: 2rem 3rem;
+    border-bottom: 1px solid $gray3;
+  }
+  .content-area {
+    padding: 2rem 3rem;
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 5rem);
+  }
+}
+.image {
+  max-width: 100%;
+}
+.para,
+p {
+  color: $black3;
+  @include set-dafault-font($family, $font-size-16);
+  line-height: 2.6rem;
+}
+.title1,
+h1 {
+  font-size: $font-size-26;
+  line-height: 3.6rem;
+  margin: 0;
+  color: $black3;
+  font-family: $family;
+  font-weight:$font-weight-semiBold;
+  @media only #{$desktop-lgMax} {
+    font-size: $font-size-24;
+    line-height: 3.4rem;
+  }
+}
+.title2,
+h2 {
+  font-size: $font-size-20;
+  line-height: 3rem;
+  margin: 0;
+  color: $black3;
+  font-weight: $font-weight-semiBold;
+  font-family: $family;
+  @media only #{$desktop-lgMax} {
+    font-size: $font-size-18;
+    line-height: 2.8rem;
+  }
+}
+.title3,
+h3 {
+  font-size: $font-size-19;
+  line-height: 2.9rem;
+  margin: 0;
+  color: $black3;
+  font-weight: $font-weight-semiBold;
+  font-family: $family;
+  @media only #{$desktop-lgMax} {
+    font-size: $font-size-17;
+    line-height: 2.7rem;
+  }
+}
+.title4,
+h4 {
+  font-size: $font-size-18;
+  line-height: 2.7rem;
+  margin: 0;
+  color: $black3;
+  font-weight: $font-weight-semiBold;
+  font-family: $family;
+  @media only #{$desktop-lgMax} {
+    font-size: $font-size-16;
+    line-height: 2.6rem; 
+  }
+}
+.title5,
+h5 {
+  margin: 0;
+  color: $black2;
+  font-weight: $font-weight-semiBold;
+  font-size: $font-size-17;
+  line-height: 2.6rem;
+  font-family: $family;
+  @media only #{$desktop-lgMax} {
+    font-size: $font-size-16;
+    line-height: 2.5rem;
+  }
+}
+.title6,
+h6 {
+  margin: 0;
+  color: $black2;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-16;
+  line-height: 2.4rem;
+  font-family: $family;
+  @media only #{$desktop-lgMax} {
+    font-size: $font-size-15;
+    line-height: 2.4rem;
+  }
+}
+.margin-ziro {
+  margin: 0;
+}
+.padding-left-10 {
+  padding-left: 1rem;
+}
+.margin-right-10 {
+  margin-right: 1rem;
+}
+.margin-btm-10 {
+  margin-bottom: 1rem;
+}
+.margin-top-10 {
+  margin-top: 1rem;
+}
+.margin-top-5 {
+  margin-top: .5rem;
+}
+.margin-btm-20 {
+  margin: 0 0 2rem 0;
+}
+.margin-top-20 {
+  margin: 2rem 0 0 0;
+}
+.align-center {
+  text-align: center !important;
+}
+.align-right {
+  text-align: right !important;
+}
+.btn {
+  padding: 1.5rem 3rem;
+  @include set-dafault-font($family, $font-size-14);
+  color: $white;
+  font-weight: $font-weight-regular;
+  background: $orange;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  @include transition(0.5s all ease);
+  &:hover {
+    background: $btn-hover;
+  }
+}
+:disabled {
+  background: $gray19 !important;
+  color: $black2 !important;
+  cursor: not-allowed !important;
+}
+.blue-btn {
+  padding: 1.1rem 2rem;
+  @include set-dafault-font($family, $font-size-14);
+  color: $white;
+  font-weight: $font-weight-regular;
+  background: $light-blue;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  @include transition(0.5s all ease);
+  &:hover {
+    background: $btn-hover;
+    color: $white;
+  }
+}
+.light-btn {
+  padding: 1.5rem 3.5rem;
+  @include set-dafault-font($family, $font-size-14);
+  color: $orange;
+  font-weight: $font-weight-regular;
+  background: $orange2;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  @include transition(0.5s all ease);
+  &:hover {
+    background: $btn-hover;
+    color: $white;
+  }
+}
+.gray-btn {
+  padding: 1.5rem 3.5rem;
+  @include set-dafault-font($family, $font-size-14);
+  color: $gray-menu;
+  font-weight: $font-weight-regular;
+  background: $gray19;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  @include transition(0.5s all ease);
+  &:hover {
+    background: $btn-hover;
+    color: $white;
+  }
+}
+.full-width {
+  width: 100%;
+}
+.row-col {
+  @include d-flex(space-between, center);
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  font-family: $family;
+  .col-box {
+    width: 100%;
+    position: relative;
+    list-style: none;
+    margin: 1rem 0;
+    .mat-error {
+      color: $red;
+      position: absolute;
+      bottom: -2.3rem;
+      left: 0rem;
+      font-size: 1.1rem;
+    }
+    .mat-icon-button{
+      top: 0.5rem;
+      right: -1rem;
+    }
+    .mat-select-arrow-wrapper{
+      transform: none;
+    }
+  }
+  .mat-form-field {
+    width: 100%;
+  }
+  ::ng-deep {
+    .mat-form-field-flex {
+      background: transparent;
+    }
+ 
+    .mat-select-arrow {
+      color: $gray-menu !important;
+    }
+    .mat-form-field-outline{
+      color: $gray6 !important;
+      height: 4.8rem;
+    }
+    .mat-form-field-label {
+      color: $black4;
+    }
+    .mat-form-field-wrapper {
+      padding: 0;
+    }
+    textarea.mat-input-element {
+      height: 10rem;
+      resize: none;
+      font-size: $font-size-14;
+      line-height: 2.4rem;
+      font-weight: $font-weight-medium;
+    }
+    .mat-select-value-text{
+      padding-left: .5rem;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+      padding: .8rem 0 .8rem .5rem;
+      margin: 0;
+      width: 100%;
+      font-size:  $font-size-13;
+      font-family: $family;
+    }
+  }
+}
+.list-loading {
+  width: 100%;
+  height: 70%;
+  @include d-flex(center, center);
+}
+::ng-deep{
+  .mat-progress-spinner svg{
+    width: auto !important;
+    max-height: 1.5rem;
+    top: 0.6rem !important;
+  }
+  .mat-option-text{
+    font-size: $font-size-13;
+    display: flex !important;
+    align-items: center;
+    .main-text{
+      font-size: $font-size-14;
+    }
+  }
+  .pagination-filter{
+    .mat-form-field-infix{
+      font-weight:$font-weight-semiBold !important;
+      color: $black5;
+      font-size: $font-size-12;
+          }
+  }
+}
+.nodatafound {
+  color: $black4;
+  font-weight:  $font-weight-semiBold;
+  @include d-flex(center, center);
+  height: 85%;
+  width: 100%;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+  color: $black2 !important
+}
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background: $body-bg !important;
+}
+.mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled){
+  background: $body-bg !important;
+}
+.mat-option.add-new:hover:not(.mat-option-disabled), .mat-option.add-new:focus:not(.mat-option-disabled){
+  background: $darkgray2 !important;
+}
+
+.mat-sort-header-content{
+  text-align: inherit !important;
+}
+.justify-center{
+  .mat-sort-header-container{
+    justify-content: center !important;
+  }
+}
+.justify-right{
+  .mat-sort-header-container{
+    justify-content: right !important;
+  }
+}
+.mat-option-text, .mat-option, .mat-form-field-label, .mat-input-element, .mat-calendar-body-cell, .mat-stepper-horizontal, .mat-select {
+  font-family: $family; 
+}
+::ng-deep{
+  .mat-radio-outer-circle{
+    border-color: $gray6;
+  }
+  .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple{
+      background: $light-blue;
+  }
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color: $light-blue;
+}
+.mat-radio-label-content{
+  font-weight: $font-weight-medium;
+  font-size: $font-size-13;
+  color: $black4;
+  font-family: $family;
+}
+.mat-datepicker-toggle-active{
+  color: $light-blue !important;
+}
+.mat-calendar-body-selected{
+  background-color:  $light-blue !important;
+}
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical)
+{
+  background-color:  $light-blue !important;
+  color: $white !important;
+  border: solid 1px $light-blue !important;
+}
+.mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
+  background-color: $white !important;
+  border: solid 1px $light-blue !important;
+}
+}
+.row-outer{
+  @include d-flex(flex-start, flex-start);
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+  .column-1{
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+  }
+  .column-2{
+    width: 50%;
+    padding: 1rem;
+    position: relative;
+  }
+  .column-3{
+    width: 33.3%;
+    padding: 1rem;
+    position: relative;
+  }
+  .column-4{
+    width: 25%;
+    padding: 1rem;
+    position: relative;
+  }
+}
+.no-data-screen{
+  @include d-flex(center, center);
+  position: absolute;
+  top: 15rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 17rem);
+  text-align: center;
+  .no-show{
+    padding: 3rem;
+  }
+  .title-wg{
+    font-size: $font-size-16;
+    font-weight: $font-weight-semiBold;
+    color: $orange;
+  }
+}
+::ng-deep{
+  .mat-form-field.mat-form-field-invalid .mat-form-field-label{
+    color:$graytext-color;
+  }
+  .mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent, .mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker
+  {
+    opacity: 0;
+  }
+  .mat-radio-ripple{
+    display: none;
+ }
+ .mat-button-ripple.mat-ripple, .mat-button-focus-overlay{
+  opacity: 0 !important;
+}
+  .mat-checkbox-label {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-13;
+    color: $black4;
+    font-family: $family;
+    margin: 0 2rem 0 .5rem;
+  }
+  .mat-checkbox-indeterminate.mat-accent,
+  .mat-checkbox-checked.mat-accent {
+    .mat-checkbox-background {
+      background-color: $light-blue;
+    }
+  }
+  .mat-checkbox-frame {
+    border: 1px solid $gray9 !important;
+  }
+
+  .mat-radio-label-content{
+    margin: 0 2rem 0 .5rem;
+  }
+  .mat-table{
+    font-family: $family;
+  }
+  .mat-select-panel{
+    min-width: calc(100% + 2rem) !important;
+    position: relative;
+    left: 0.5rem;
+  }
+  .mat-expansion-panel-content{
+    font-family: $family;
+  }
+  .mat-main{
+    .mat-form-field-prefix .mat-icon-button, .mat-form-field-suffix .mat-icon-button{
+      right: -1rem;
+    }
+        .mat-expansion-panel-header{
+          height: 5rem;
+          box-shadow: none;
+          @include flex-v-center();
+          position: relative;
+          padding: 0 1.5rem;
+          font-size: $font-size-16;
+          font-weight: $font-weight-semiBold;
+          color:$graytext-color;
+         border: solid 1px $gray6;
+         background: $light-gray1 !important;
+         font-family: $family;
+      }
+        .mat-expansion-panel-spacing{
+          margin: 0 !important;
+      }
+      .mat-expansion-panel-body{
+          box-shadow: none;
+         margin: 0;
+         padding: 0;
+      }
+      .mat-expansion-panel{
+          box-shadow: none !important;
+          margin-bottom: 1rem;
+      }
+      .mat-expansion-indicator::after{
+          padding: .2.2rem;
+          position: relative;
+          top: -.3rem;
+      }
+      .mat-expanded{
+          .mat-expansion-indicator::after{
+              top: 0;
+          }
+      }
+      
+      .mat-expansion-panel-header-description, .mat-expansion-indicator::after{
+          color:$graytext-color;
+      }
+      .mat-expansion-indicator{
+        position: relative;
+        right: 1rem
+      }
+      :disabled {
+          background: none !important;
+          color: $darktext-color2 !important;
+          cursor: not-allowed !important;
+        }
+        .mat-datepicker-toggle-default-icon{
+    position: relative;
+    right: -1.5rem;
+        }
+        .mat-select-arrow{
+          position: relative;
+          top: .5rem;
+         }
+         .mat-form-field-flex {
+          background: transparent;
+                }
+        .mat-select-arrow {
+          color: $gray-menu !important;
+        }
+        .mat-form-field-outline{
+          color: $gray6 !important;
+          height: 4.8rem;
+        }
+        .mat-form-field-label {
+          color: $black4;
+          mat-label{
+              background: $white;
+              padding: 0 .5rem .5rem;
+          }
+        }
+        .mat-form-field-wrapper {
+          padding: 0;
+        }
+        textarea.mat-input-element {
+          height: 7rem;
+          resize: none;
+          font-size: $font-size-14;
+          line-height: 1.5rem;
+          font-weight: $font-weight-medium;
+        }
+        .text-30{
+          textarea.mat-input-element {
+            height: 2.5rem;
+                      }
+        }
+        .text-description{
+          .mat-form-field-outline{
+            height: 10.8rem;
+          }
+
+          .mat-form-field-infix{
+            height: 12rem;
+          }
+        }
+      
+        .mat-form-field-appearance-outline .mat-form-field-infix {
+          padding: .8rem 0 .8rem .5rem;
+          margin: 0;
+          width: 100%;
+          font-size:  $font-size-13;
+          font-family: $family;
+          line-height: 2rem;
+        }
+        .mat-button-ripple.mat-ripple, .mat-button-focus-overlay{
+          opacity: 0 !important;
+        }
+        .mat-select-panel-wrap{
+          margin-top: 3rem !important;
+      }
+        .mat-form-field{
+          width: 100%;
+      }
+      .mat-form-field-wrapper{
+          padding: 0;
+      }
+           .mat-form-field-appearance-outline .mat-form-field-label, input.mat-input-element{
+              font-size: $font-size-13;
+              font-weight: $font-weight-medium;
+              line-height:1.4rem;
+          }
+          .mat-slider.mat-accent .mat-slider-track-fill, .mat-slider.mat-accent .mat-slider-thumb, .mat-slider.mat-accent .mat-slider-thumb-label{
+              background: $orange;
+              outline: none;
+          }
+    
+        .mat-select-panel-wrap .mat-form-field-autofill-control{
+              font-size: $font-size-13 !important;
+              font-weight: $font-weight-medium !important;
+              height: 4rem;
+              width: 90%;
+              position: relative;
+              left: 5%;
+          }
+          .mat-datepicker-toggle-default-icon{
+              position: relative;
+              top: .4rem;
+              font-size: $font-size-13;
+              color: $lightgray4;
+              opacity: 0.6;
+              right: 0;
+          }
+   
+  }
+  .mat-option{
+    border-top: 1px solid $lightgray2;
+    font-family: $family;
+}
+.mat-select-panel{
+  margin-top: 3rem;
+}
+.mat-select-value, .mat-form-field, .mat-main input.mat-input-element{
+  color:$graytext-color;
+
+}
+.mat-typography, h1, h2, h3, h4, h5, p,  li{
+  font-family: $family;
+}
+}
+.pagination-filter {
+  @include d-flex(flex-end, center);
+  padding-right: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid $gray6;
+  .pagination {
+    padding: 0 !important;
+  }
+  ::ng-deep {
+    .mat-form-field-wrapper {
+      padding: 0;
+    }
+    .mat-form-field-infix {
+      margin: 0;
+      padding: 1.5rem 0 1rem 0 !important;
+      border: 0;
+      font-weight: $font-weight-medium;
+      width: 145px;
+      @media only #{$mobile-smMax} {
+        width: 18px;
+      }
+    }
+    .mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+      transform: translateY(0);
+    }
+    .mat-select-arrow {
+      color: $gray-menu !important;
+    }
+    .mat-form-field-outline-thick {
+      color: $gray7 !important;
+    }
+  }
+}
+
+.edit-delete-btn{
+  position: relative;
+  .openMenu{
+    position: absolute;
+    right: 2rem;
+    background: $white;
+    top: 2rem;
+    margin: 0;
+    padding: 0;
+    font-family: $family;
+    min-width: 10rem;
+    border-radius: .5rem;
+    box-shadow: $shadow1;
+    z-index: 1;
+    .edit-delete{
+      @include d-flex(flex-start, center);
+      list-style: none;
+      color: $white;
+      padding: .5rem .8rem;
+      border-bottom: 1px solid $white;
+      cursor: pointer;
+      &:last-child{
+        border-bottom: 0;
+      }
+      .material-icons{
+        font-size: $font-size-18;
+        width: 2.2rem;
+      }
+    }
+    .edit{
+      color: $green;
+    }
+    .delete{
+      color: $red;
+    }
+  }
+  .mat-primary svg {
+    filter: hue-rotate(100deg);
+    width: auto;
+    max-height: 1.2rem;
+    left: 2px;
+    top: 3px;
+  }
+}
+
+
+.mat-error {
+  color: $red;
+  position: absolute;
+  bottom:0;
+  left: 0rem;
+  font-size: 1.1rem;
+  font-family: $family;
+  font-size: $font-size-11;
+  font-weight: $font-weight-semiBold;
+}
+.toggle-yes {
+  @include d-flex(space-between, center);
+  p {
+    font-size: $font-size-14;
+  }
+}
+
+.checkbox-yes-no {
+  float: left;
+  position: relative;
+  @include flex-v-center();
+  justify-content: normal;
+  .No,
+  .Yes {
+    font-size: $font-size-12;
+  }
+  .circle {
+    background-color: $gray25;
+    width: 39px;
+    height: 19px;
+    position: relative;
+    border-radius: 50px;
+    @include flex-v-center();
+    transition-duration: 0.5s;
+    border: 1px solid $gray26;
+    margin: 0 10px;
+  }
+  input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+  }
+  .circle::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: $white;
+    border-radius: 50px;
+    position: absolute;
+    left: 2px;
+    box-shadow: $shadow12;
+    transition-duration: 0.5s;
+  }
+  input:checked + .circle::before {
+    left: 22px;
+  }
+  input:checked + .circle {
+    background: $orange !important;
+  }
+}
